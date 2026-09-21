@@ -17,7 +17,7 @@ test('search, filters, quick pick, and responsive layout', async ({ page }) => {
   ]) {
     await page.setViewportSize(viewport);
     await page.goto('/');
-    await expect(page.locator('.shop')).toHaveCount(87);
+    await expect(page.locator('.shop')).toHaveCount(111);
     await expectNoOverflow(page);
   }
 
@@ -54,6 +54,12 @@ test('search, filters, quick pick, and responsive layout', async ({ page }) => {
   await page.locator('#search').fill('Dairy Queen');
   await expect(page.locator('.shop')).toHaveCount(1);
   await expect(page.locator('.shop .detail')).toHaveAttribute('href', 'https://maps.app.goo.gl/8a5VN76oJT6SmFBF6');
+
+  await page.locator('#search').fill('โอ้กะจู๋');
+  await expect(page.locator('.shop .detail')).toHaveAttribute('href', 'https://maps.app.goo.gl/mzFZvAK3MmrsiNCaA');
+
+  await page.locator('#search').fill('Grainey');
+  await expect(page.locator('.shop .detail')).toHaveAttribute('href', 'https://grainey.com/soft-cookie-shop/');
   await page.locator('#search').fill('');
 
   await page.locator('#floor').selectOption('B');
@@ -123,7 +129,7 @@ test('all restaurant images either load or reveal the fallback', async ({ page }
       fallbackNames: images.filter((img) => img.hidden).filter((img) => !img.parentElement.querySelector('.fallback')?.textContent.trim()).length,
     };
   });
-  expect(result.total).toBe(87);
+  expect(result.total).toBe(111);
   expect(result.uncoveredBroken).toBe(0);
   expect(result.fallbackNames).toBe(0);
 });
@@ -136,4 +142,9 @@ test('closed records never render', async ({ page }) => {
   });
   expect(closedNames.length).toBe(1);
   for (const name of closedNames) await expect(page.getByText(name, { exact: true })).toHaveCount(0);
+  const needsReviewCount = await page.evaluate(async () => {
+    const text = await fetch('restaurants.csv').then((response) => response.text());
+    return text.split('\n').filter((line) => line.includes(',needs-review,')).length;
+  });
+  expect(needsReviewCount).toBe(0);
 });
