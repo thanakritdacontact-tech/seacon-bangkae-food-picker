@@ -315,7 +315,7 @@ window.MALL_FOOD_PICKER = {
     {
       "id": "bearhouse-c547e496",
       "name": "BEARHOUSE",
-      "category": "อาหารไทยและนานาชาติ",
+      "category": "เครื่องดื่มและคาเฟ่",
       "location": "อาคารหลัก",
       "floor": "2",
       "status": "active",

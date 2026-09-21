@@ -17,12 +17,13 @@ const notesIndex = headers.indexOf("notes");
 const correctedName = "CHAGEE Seacon Bangkae";
 const correctedId = `chagee-seacon-bangkae-${crypto.createHash("sha1").update(`${correctedName}|1`).digest("hex").slice(0, 8)}`;
 const correctedDetails = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(correctedName)}`;
+const beverageCategory = "เครื่องดื่มและคาเฟ่";
 
 const rows = values.slice(1)
   .filter((row) => row[nameIndex] !== "HI TEA EVERYDAY")
   .map((row) => {
     const next = [...row];
-    if (next[categoryIndex] === "เครื่องดื่ม") next[categoryIndex] = "เครื่องดื่มและคาเฟ่";
+    if (next[categoryIndex] === "เครื่องดื่ม" || next[nameIndex] === "BEARHOUSE") next[categoryIndex] = beverageCategory;
     if (row[nameIndex] !== "CHAGEE") return next;
     next[idIndex] = correctedId;
     next[nameIndex] = correctedName;
@@ -34,6 +35,9 @@ const rows = values.slice(1)
 if (rows.filter((row) => row[nameIndex] === correctedName).length !== 1) throw new Error("Expected one corrected CHAGEE row.");
 if (rows.some((row) => row[nameIndex] === "HI TEA EVERYDAY")) throw new Error("HI TEA EVERYDAY was not removed.");
 if (rows.some((row) => row[categoryIndex] === "เครื่องดื่ม")) throw new Error("Legacy beverage category was not merged.");
+if (!rows.some((row) => row[nameIndex] === "BEARHOUSE" && row[categoryIndex] === beverageCategory)) {
+  throw new Error("BEARHOUSE category correction was not applied.");
+}
 
 function csvCell(value) {
   const text = String(value ?? "");

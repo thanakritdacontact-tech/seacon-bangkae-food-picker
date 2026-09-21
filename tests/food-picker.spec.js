@@ -27,6 +27,10 @@ test('search, filters, quick pick, and responsive layout', async ({ page }) => {
   await page.locator('#search').fill('SUSHIRO');
   await expect(page.locator('.shop')).toHaveCount(1);
   await expect(page.locator('.shop h3')).toContainText('SUSHIRO');
+
+  await page.locator('#search').fill('BEARHOUSE');
+  await expect(page.locator('.shop')).toHaveCount(1);
+  await expect(page.locator('.shop .tag').first()).toHaveText('เครื่องดื่มและคาเฟ่');
   await page.locator('#search').fill('');
 
   await page.locator('#floor').selectOption('B');
