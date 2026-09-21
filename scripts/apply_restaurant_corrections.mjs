@@ -11,6 +11,7 @@ const headers = values[0];
 const nameIndex = headers.indexOf("name");
 const idIndex = headers.indexOf("id");
 const categoryIndex = headers.indexOf("category");
+const statusIndex = headers.indexOf("status");
 const detailsIndex = headers.indexOf("details_url");
 const imageIndex = headers.indexOf("image_url");
 const imageSourceIndex = headers.indexOf("image_source");
@@ -28,6 +29,7 @@ const tamTamUrl = "https://www.wongnai.com/restaurants/146789IE-%E0%B8%95%E0%B8%
 const tamTamImage = "https://thanakritdacontact-tech.github.io/seacon-bangkae-food-picker/assets/tamtam-wongnai.jpg";
 const mungkornbinUrl = "https://maps.app.goo.gl/DhRgaPBapmjbCw7aA";
 const mungkornbinImage = "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk1XUg2RIe5HQIup0_IsvxiLIvqy5ScFTEtfbP775y7szcROmOE4eQrk-V9-MRo4hgpL7WwSU6pgadL6fMxxxDfeW8Zl_iEewT3_6gHRlHpYp8vyqGE-2E8h1Y81jedvWqI8neHe3rDWVfs=w408-h544-k-no";
+const dairyQueenUrl = "https://maps.app.goo.gl/8a5VN76oJT6SmFBF6";
 
 const rows = values.slice(1)
   .filter((row) => !["HI TEA EVERYDAY", "MUJI"].includes(row[nameIndex]))
@@ -49,6 +51,12 @@ const rows = values.slice(1)
       next[referenceIndex] = mungkornbinUrl;
       next[notesIndex] = "User-provided Google Maps listing matches มังกรบินคาเฟ่ Mongoornbin; card image sourced from that listing; updated 2026-09-21.";
     }
+    if (next[nameIndex] === "Dairy Queen") {
+      next[statusIndex] = "active";
+      next[detailsIndex] = dairyQueenUrl;
+      next[referenceIndex] = dairyQueenUrl;
+      next[notesIndex] = "User-provided Google Maps listing confirms Dairy Queen at Seacon Bangkae and identifies counters on B1 and floor 4; retained the existing B-floor directory record; updated 2026-09-21.";
+    }
     if (row[nameIndex] !== "CHAGEE") return next;
     next[idIndex] = correctedId;
     next[nameIndex] = correctedName;
@@ -69,6 +77,7 @@ if ([...bakeryNames].some((name) => !rows.some((row) => row[nameIndex] === name 
 }
 if (!rows.some((row) => row[nameIndex] === "ตำตำ" && row[detailsIndex] === tamTamUrl && row[imageIndex] === tamTamImage)) throw new Error("ตำตำ source correction was not applied.");
 if (!rows.some((row) => row[nameIndex] === "Mungkornbin" && row[detailsIndex] === mungkornbinUrl && row[imageIndex] === mungkornbinImage)) throw new Error("Mungkornbin source correction was not applied.");
+if (!rows.some((row) => row[nameIndex] === "Dairy Queen" && row[statusIndex] === "active" && row[detailsIndex] === dairyQueenUrl)) throw new Error("Dairy Queen activation was not applied.");
 
 function csvCell(value) {
   const text = String(value ?? "");

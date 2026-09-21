@@ -872,6 +872,19 @@ window.MALL_FOOD_PICKER = {
       "notes": "Google Maps matched the Seacon Bangkae branch and displayed current hours; checked 2026-09-21."
     },
     {
+      "id": "dairy-queen-6ea4bb7e",
+      "name": "Dairy Queen",
+      "category": "ขนมและเบเกอรี",
+      "location": "ชั้นใต้ดิน",
+      "floor": "B",
+      "status": "active",
+      "details_url": "https://maps.app.goo.gl/8a5VN76oJT6SmFBF6",
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkAIOJ77jN7lg595_IO5Am0gQqBVEtv1be1sRKQizqCyXzqz3O_vuFIuTPy90S9aMeHzDdtN-6E2J4OYSeost4bbFPv8FylVydKSQsEQA6V85EKGcPIwPe2TjX-Gn1qYDU6cGKdNrFsgFzA=w408-h306-k-no",
+      "image_source": "google-maps",
+      "reference_url": "https://maps.app.goo.gl/8a5VN76oJT6SmFBF6",
+      "notes": "User-provided Google Maps listing confirms Dairy Queen at Seacon Bangkae and identifies counters on B1 and floor 4; retained the existing B-floor directory record; updated 2026-09-21."
+    },
+    {
       "id": "dunkin-1795756a",
       "name": "Dunkin",
       "category": "ขนมและเบเกอรี",
@@ -1133,8 +1146,8 @@ window.MALL_FOOD_PICKER = {
     }
   ],
   "counts": {
-    "active": 86,
+    "active": 87,
     "closed": 1,
-    "needs-review": 28
+    "needs-review": 27
   }
 };
