@@ -159,7 +159,7 @@ window.MALL_FOOD_PICKER = {
     {
       "id": "mixue-35a892a2",
       "name": "MIXUE",
-      "category": "อาหารไทยและนานาชาติ",
+      "category": "เครื่องดื่มและคาเฟ่",
       "location": "อาคารหลัก",
       "floor": "1",
       "status": "active",
@@ -194,19 +194,6 @@ window.MALL_FOOD_PICKER = {
       "image_source": "google-maps",
       "reference_url": "https://www.google.com/maps/search/?api=1&query=Mr.Jolly%20Seacon%20Bangkae",
       "notes": "Google Maps matched the Seacon Bangkae branch and displayed current hours; checked 2026-09-21."
-    },
-    {
-      "id": "muji-563a612f",
-      "name": "MUJI",
-      "category": "อาหารไทยและนานาชาติ",
-      "location": "อาคารหลัก",
-      "floor": "1",
-      "status": "active",
-      "details_url": "https://www.google.com/maps/search/?api=1&query=MUJI%20Seacon%20Bangkae",
-      "image_url": "https://seaconbangkae.com/Files/1stpage_JJ%20Folder/shop%20by%20brand/S_MUJILogo.jpg",
-      "image_source": "official",
-      "reference_url": "https://seaconbangkae.com/shop/10",
-      "notes": "Current official mall directory lists this branch on floor 1; Maps active; checked 2026-09-21."
     },
     {
       "id": "myeongryun-jinsa-galbi-dbd21b94",
@@ -341,7 +328,7 @@ window.MALL_FOOD_PICKER = {
     {
       "id": "fuku-matcha-41ecc98a",
       "name": "FUKU MATCHA",
-      "category": "อาหารไทยและนานาชาติ",
+      "category": "เครื่องดื่มและคาเฟ่",
       "location": "อาคารหลัก",
       "floor": "2",
       "status": "active",
@@ -367,7 +354,7 @@ window.MALL_FOOD_PICKER = {
     {
       "id": "inthanin-ec827568",
       "name": "Inthanin",
-      "category": "อาหารไทยและนานาชาติ",
+      "category": "เครื่องดื่มและคาเฟ่",
       "location": "อาคารหลัก",
       "floor": "3",
       "status": "active",
@@ -380,7 +367,7 @@ window.MALL_FOOD_PICKER = {
     {
       "id": "kita-tea-stand-9ecb35cd",
       "name": "Kita Tea Stand",
-      "category": "อาหารไทยและนานาชาติ",
+      "category": "เครื่องดื่มและคาเฟ่",
       "location": "อาคารหลัก",
       "floor": "3",
       "status": "active",
@@ -410,11 +397,11 @@ window.MALL_FOOD_PICKER = {
       "location": "อาคารหลัก",
       "floor": "4",
       "status": "active",
-      "details_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%95%E0%B8%B3%E0%B8%95%E0%B8%B3%20Seacon%20Bangkae",
-      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnMyvx70YVKow-9YENFtUWgfo3chsG2ImR2kVXBfx_tfgdZXrdds0LeInwamtgs5avnwdaTOLTtKQuve-bjfeMEgiBMgZw-l2xoCJm80otJrL3eC0KKpRprbR-EtKx6VElXUCyi=w408-h292-k-no",
-      "image_source": "google-maps",
-      "reference_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%95%E0%B8%B3%E0%B8%95%E0%B8%B3%20Seacon%20Bangkae",
-      "notes": "Google Maps matched the Seacon Bangkae branch and displayed current hours; checked 2026-09-21."
+      "details_url": "https://www.wongnai.com/restaurants/146789IE-%E0%B8%95%E0%B8%B3%E0%B8%95%E0%B8%B3-%E0%B8%8B%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%99-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%84",
+      "image_url": "https://thanakritdacontact-tech.github.io/seacon-bangkae-food-picker/assets/tamtam-wongnai.jpg",
+      "image_source": "review",
+      "reference_url": "https://www.wongnai.com/restaurants/146789IE-%E0%B8%95%E0%B8%B3%E0%B8%95%E0%B8%B3-%E0%B8%8B%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%99-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%84",
+      "notes": "User-provided Wongnai branch page confirms Seacon Bangkae floor 4; local card image copied from that page because its image host blocks hotlinking; updated 2026-09-21."
     },
     {
       "id": "shop-f436bf08",
@@ -731,7 +718,7 @@ window.MALL_FOOD_PICKER = {
     {
       "id": "yodcha-681ff5a5",
       "name": "YODCHA",
-      "category": "อาหารไทยและนานาชาติ",
+      "category": "เครื่องดื่มและคาเฟ่",
       "location": "อาคารหลัก",
       "floor": "4",
       "status": "active",
@@ -1146,7 +1133,7 @@ window.MALL_FOOD_PICKER = {
     }
   ],
   "counts": {
-    "active": 87,
+    "active": 86,
     "closed": 1,
     "needs-review": 28
   }

@@ -17,7 +17,7 @@ test('search, filters, quick pick, and responsive layout', async ({ page }) => {
   ]) {
     await page.setViewportSize(viewport);
     await page.goto('/');
-    await expect(page.locator('.shop')).toHaveCount(87);
+    await expect(page.locator('.shop')).toHaveCount(86);
     await expectNoOverflow(page);
   }
 
@@ -28,9 +28,18 @@ test('search, filters, quick pick, and responsive layout', async ({ page }) => {
   await expect(page.locator('.shop')).toHaveCount(1);
   await expect(page.locator('.shop h3')).toContainText('SUSHIRO');
 
-  await page.locator('#search').fill('BEARHOUSE');
+  for (const name of ['BEARHOUSE', 'FUKU MATCHA', 'MIXUE', 'Inthanin', 'YODCHA', 'Kita Tea Stand']) {
+    await page.locator('#search').fill(name);
+    await expect(page.locator('.shop')).toHaveCount(1);
+    await expect(page.locator('.shop .tag').first()).toHaveText('เครื่องดื่มและคาเฟ่');
+  }
+  await page.locator('#search').fill('MUJI');
+  await expect(page.locator('.shop')).toHaveCount(0);
+
+  await page.locator('#search').fill('ตำตำ');
   await expect(page.locator('.shop')).toHaveCount(1);
-  await expect(page.locator('.shop .tag').first()).toHaveText('เครื่องดื่มและคาเฟ่');
+  await expect(page.locator('.shop .detail')).toHaveAttribute('href', /wongnai\.com\/restaurants\/146789IE/);
+  await expect(page.locator('.shop img')).toHaveAttribute('src', /\/assets\/tamtam-wongnai\.jpg$/);
   await page.locator('#search').fill('');
 
   await page.locator('#floor').selectOption('B');
@@ -100,7 +109,7 @@ test('all restaurant images either load or reveal the fallback', async ({ page }
       fallbackNames: images.filter((img) => img.hidden).filter((img) => !img.parentElement.querySelector('.fallback')?.textContent.trim()).length,
     };
   });
-  expect(result.total).toBe(87);
+  expect(result.total).toBe(86);
   expect(result.uncoveredBroken).toBe(0);
   expect(result.fallbackNames).toBe(0);
 });
