@@ -92,8 +92,8 @@ window.MALL_FOOD_PICKER = {
       "notes": "Google Maps matched the Seacon Bangkae branch and displayed current hours; checked 2026-09-21."
     },
     {
-      "id": "chagee-6881cdae",
-      "name": "CHAGEE",
+      "id": "chagee-seacon-bangkae-7039b005",
+      "name": "CHAGEE Seacon Bangkae",
       "category": "เครื่องดื่มและคาเฟ่",
       "location": "อาคารหลัก",
       "floor": "1",
@@ -102,7 +102,7 @@ window.MALL_FOOD_PICKER = {
       "image_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkYnI2TdmowgZQlvmpqH3rm_0K1EWtPs3Ex0J-pGM6acwXuY1YSZNGKiSLkJV03ne3596EV5xVDKAa_v58S2MwczYuVOaCxYrrhhaCCpcLq0YEDJMq8J8_gXk0EHld0wdSucRjfXbzcC2so=w408-h306-k-no",
       "image_source": "google-maps",
       "reference_url": "https://www.lemon8-app.com/@seaconplus_bangkae/7602836162918515201?region=th",
-      "notes": "Official Seacon Plus 2026 update names this branch on floor 1; Maps needs-review; checked 2026-09-21."
+      "notes": "Official Seacon Plus 2026 update names this branch on floor 1; Maps needs-review; checked 2026-09-21. User-verified correction: HI TEA EVERYDAY was a duplicate of this branch."
     },
     {
       "id": "hey-coffee-a0f6359f",
@@ -937,19 +937,6 @@ window.MALL_FOOD_PICKER = {
       "notes": "Google Maps matched the Seacon Bangkae branch and displayed current hours; checked 2026-09-21."
     },
     {
-      "id": "hi-tea-everyday-da4c5ff2",
-      "name": "HI TEA EVERYDAY",
-      "category": "เครื่องดื่ม",
-      "location": "ชั้นใต้ดิน",
-      "floor": "B",
-      "status": "active",
-      "details_url": "https://www.google.com/maps/search/?api=1&query=HI%20TEA%20EVERYDAY%20Seacon%20Bangkae",
-      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkYnI2TdmowgZQlvmpqH3rm_0K1EWtPs3Ex0J-pGM6acwXuY1YSZNGKiSLkJV03ne3596EV5xVDKAa_v58S2MwczYuVOaCxYrrhhaCCpcLq0YEDJMq8J8_gXk0EHld0wdSucRjfXbzcC2so=w408-h306-k-no",
-      "image_source": "google-maps",
-      "reference_url": "https://www.lemon8-app.com/@seaconplus_bangkae/7602836162918515201?region=th",
-      "notes": "Official Seacon Plus 2026 update names this branch on floor B; Maps active; checked 2026-09-21."
-    },
-    {
       "id": "italasia-4eb1f584",
       "name": "Italasia",
       "category": "เครื่องดื่มและคาเฟ่",
@@ -1159,7 +1146,7 @@ window.MALL_FOOD_PICKER = {
     }
   ],
   "counts": {
-    "active": 88,
+    "active": 87,
     "closed": 1,
     "needs-review": 28
   }

@@ -17,7 +17,7 @@ test('search, filters, quick pick, and responsive layout', async ({ page }) => {
   ]) {
     await page.setViewportSize(viewport);
     await page.goto('/');
-    await expect(page.locator('.shop')).toHaveCount(88);
+    await expect(page.locator('.shop')).toHaveCount(87);
     await expectNoOverflow(page);
   }
 
@@ -93,7 +93,7 @@ test('all restaurant images either load or reveal the fallback', async ({ page }
       fallbackNames: images.filter((img) => img.hidden).filter((img) => !img.parentElement.querySelector('.fallback')?.textContent.trim()).length,
     };
   });
-  expect(result.total).toBe(88);
+  expect(result.total).toBe(87);
   expect(result.uncoveredBroken).toBe(0);
   expect(result.fallbackNames).toBe(0);
 });

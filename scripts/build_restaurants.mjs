@@ -17,14 +17,13 @@ const floors = [
 ];
 
 const recentStores = [
-  ["CHAGEE", "1", "เครื่องดื่มและคาเฟ่"],
+  ["CHAGEE Seacon Bangkae", "1", "เครื่องดื่มและคาเฟ่"],
   ["Mini Oriental Speedbar", "2", "เครื่องดื่มและคาเฟ่"],
   ["Rowie’s Coffee", "1", "เครื่องดื่มและคาเฟ่"],
   ["NAISNOW", "1", "เครื่องดื่มและคาเฟ่"],
   ["Italasia", "B", "เครื่องดื่มและคาเฟ่"],
   ["Baron's Bar", "B", "เครื่องดื่มและคาเฟ่"],
   ["SUSHi PLUS", "4", "อาหารญี่ปุ่น"],
-  ["HI TEA EVERYDAY", "B", "เครื่องดื่ม"],
 ];
 
 function decodeHtml(value) {
@@ -103,7 +102,7 @@ function extractPunproRows(html) {
 }
 
 async function mapsEvidence(name) {
-  const query = `${name} Seacon Bangkae`;
+  const query = /seacon bangkae/i.test(name) ? name : `${name} Seacon Bangkae`;
   const detailsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
   try {
     const shell = await fetchText(detailsUrl);
