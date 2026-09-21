@@ -969,11 +969,11 @@ window.MALL_FOOD_PICKER = {
       "location": "ชั้นใต้ดิน",
       "floor": "B",
       "status": "active",
-      "details_url": "https://www.google.com/maps/search/?api=1&query=Mungkornbin%20Seacon%20Bangkae",
-      "image_url": "https://lh3.googleusercontent.com/grass-cs/ACvplmOJOnz_o4gYzDsLj-nvL4pmJQxoUQTtSG2hcKPBnyCH-nK2OmxTY5-WSnYOVLbWkTPU26Ma_u1QKgKMWiuL7LQ3cILzjVrqn023NiwKDCzHEsLiidd-1eN4ThewE8i4DvHrfmNy90WkMj4u=w408-h306-k-no",
+      "details_url": "https://maps.app.goo.gl/DhRgaPBapmjbCw7aA",
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk1XUg2RIe5HQIup0_IsvxiLIvqy5ScFTEtfbP775y7szcROmOE4eQrk-V9-MRo4hgpL7WwSU6pgadL6fMxxxDfeW8Zl_iEewT3_6gHRlHpYp8vyqGE-2E8h1Y81jedvWqI8neHe3rDWVfs=w408-h544-k-no",
       "image_source": "google-maps",
-      "reference_url": "https://www.google.com/maps/search/?api=1&query=Mungkornbin%20Seacon%20Bangkae",
-      "notes": "Google Maps matched the Seacon Bangkae branch and displayed current hours; checked 2026-09-21."
+      "reference_url": "https://maps.app.goo.gl/DhRgaPBapmjbCw7aA",
+      "notes": "User-provided Google Maps listing matches มังกรบินคาเฟ่ Mongoornbin; card image sourced from that listing; updated 2026-09-21."
     },
     {
       "id": "n-b-pancake-1be54728",

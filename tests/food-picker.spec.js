@@ -45,6 +45,11 @@ test('search, filters, quick pick, and responsive layout', async ({ page }) => {
   await expect(page.locator('.shop')).toHaveCount(1);
   await expect(page.locator('.shop .detail')).toHaveAttribute('href', /wongnai\.com\/restaurants\/146789IE/);
   await expect(page.locator('.shop img')).toHaveAttribute('src', /\/assets\/tamtam-wongnai\.jpg$/);
+
+  await page.locator('#search').fill('Mungkornbin');
+  await expect(page.locator('.shop')).toHaveCount(1);
+  await expect(page.locator('.shop .detail')).toHaveAttribute('href', 'https://maps.app.goo.gl/DhRgaPBapmjbCw7aA');
+  await expect(page.locator('.shop img')).toHaveAttribute('src', /AHRPTWk1XUg2RIe5HQIup0_IsvxiLIv/);
   await page.locator('#search').fill('');
 
   await page.locator('#floor').selectOption('B');
