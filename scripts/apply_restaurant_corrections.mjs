@@ -10,6 +10,7 @@ const values = sheet.getUsedRange().values;
 const headers = values[0];
 const nameIndex = headers.indexOf("name");
 const idIndex = headers.indexOf("id");
+const categoryIndex = headers.indexOf("category");
 const detailsIndex = headers.indexOf("details_url");
 const notesIndex = headers.indexOf("notes");
 
@@ -20,8 +21,9 @@ const correctedDetails = `https://www.google.com/maps/search/?api=1&query=${enco
 const rows = values.slice(1)
   .filter((row) => row[nameIndex] !== "HI TEA EVERYDAY")
   .map((row) => {
-    if (row[nameIndex] !== "CHAGEE") return row;
     const next = [...row];
+    if (next[categoryIndex] === "เครื่องดื่ม") next[categoryIndex] = "เครื่องดื่มและคาเฟ่";
+    if (row[nameIndex] !== "CHAGEE") return next;
     next[idIndex] = correctedId;
     next[nameIndex] = correctedName;
     next[detailsIndex] = correctedDetails;
@@ -31,6 +33,7 @@ const rows = values.slice(1)
 
 if (rows.filter((row) => row[nameIndex] === correctedName).length !== 1) throw new Error("Expected one corrected CHAGEE row.");
 if (rows.some((row) => row[nameIndex] === "HI TEA EVERYDAY")) throw new Error("HI TEA EVERYDAY was not removed.");
+if (rows.some((row) => row[categoryIndex] === "เครื่องดื่ม")) throw new Error("Legacy beverage category was not merged.");
 
 function csvCell(value) {
   const text = String(value ?? "");

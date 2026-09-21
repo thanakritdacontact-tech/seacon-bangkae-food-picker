@@ -21,6 +21,9 @@ test('search, filters, quick pick, and responsive layout', async ({ page }) => {
     await expectNoOverflow(page);
   }
 
+  await expect(page.getByRole('button', { name: 'เครื่องดื่ม', exact: true })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'เครื่องดื่มและคาเฟ่', exact: true })).toHaveCount(1);
+
   await page.locator('#search').fill('SUSHIRO');
   await expect(page.locator('.shop')).toHaveCount(1);
   await expect(page.locator('.shop h3')).toContainText('SUSHIRO');
