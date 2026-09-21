@@ -1,0 +1,13 @@
+{
+  "site_name": "SEACON BANGKAE FOOD PICKER",
+  "mall_name": "ซีคอน บางแค · กรุงเทพมหานคร",
+  "kicker": "SEACON BANGKAE DINING DIRECTORY",
+  "headline": "มื้อนี้ กินอะไรดี?",
+  "description": "ค้นหาร้านตามชั้น หมวดหมู่ และโซน หรือให้วงล้อช่วยเลือกมื้อนี้แทนคุณ",
+  "primary_color": "#25316d",
+  "accent_color": "#ffdc34",
+  "highlight_color": "#e64072",
+  "language": "th",
+  "source_note": "อัปเดตข้อมูล 21 ก.ย. 2569 จาก Punpro, Shop Directory ของ Seacon Bangkae, Google Maps และช่องทางทางการของร้าน โปรดตรวจสอบเวลาเปิดก่อนเดินทาง",
+  "homepage_url": "https://thanakritdacontact-tech.github.io/seacon-bangkae-food-picker/"
+}
