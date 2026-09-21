@@ -783,7 +783,7 @@ window.MALL_FOOD_PICKER = {
     {
       "id": "dolce-gelatino-e544d0f5",
       "name": "โดเช่ (Dolce Gelatino)",
-      "category": "อาหารไทยและนานาชาติ",
+      "category": "ขนมและเบเกอรี",
       "location": "ชั้นใต้ดิน",
       "floor": "B",
       "status": "active",
@@ -861,7 +861,7 @@ window.MALL_FOOD_PICKER = {
     {
       "id": "bun-8bf9b01a",
       "name": "Bun",
-      "category": "อาหารไทยและนานาชาติ",
+      "category": "ขนมและเบเกอรี",
       "location": "ชั้นใต้ดิน",
       "floor": "B",
       "status": "active",
@@ -874,7 +874,7 @@ window.MALL_FOOD_PICKER = {
     {
       "id": "dunkin-1795756a",
       "name": "Dunkin",
-      "category": "อาหารไทยและนานาชาติ",
+      "category": "ขนมและเบเกอรี",
       "location": "ชั้นใต้ดิน",
       "floor": "B",
       "status": "active",

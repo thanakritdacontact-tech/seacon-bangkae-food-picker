@@ -33,6 +33,11 @@ test('search, filters, quick pick, and responsive layout', async ({ page }) => {
     await expect(page.locator('.shop')).toHaveCount(1);
     await expect(page.locator('.shop .tag').first()).toHaveText('เครื่องดื่มและคาเฟ่');
   }
+  for (const name of ['Bun', 'Dunkin', 'โดเช่ (Dolce Gelatino)']) {
+    await page.locator('#search').fill(name);
+    await expect(page.locator('.shop')).toHaveCount(1);
+    await expect(page.locator('.shop .tag').first()).toHaveText('ขนมและเบเกอรี');
+  }
   await page.locator('#search').fill('MUJI');
   await expect(page.locator('.shop')).toHaveCount(0);
 
